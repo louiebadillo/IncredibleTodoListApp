@@ -12,6 +12,7 @@ function ToDoList({tasks}) {
           </View>
         </Pressable>
       ))}
+    </ScrollView>
   );
 };
 
