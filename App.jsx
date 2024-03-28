@@ -4,7 +4,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -15,11 +15,19 @@ import {
   TextInput,
   Button
 } from 'react-native';
-
+import ToDoForm from './components/ToDoForm';
+import ToDoList from './components/ToDoList';
 
 function App() {
+  const [tasks, setTasks] = useState([
+    'Do laundry',
+    'Go to gym',
+    'Walk dog'
+  ]);
+
   return (
     <SafeAreaView>
+      <ToDoList tasks={tasks} />
       <ScrollView>
         <Pressable>
           <View style={[styles.task, styles.completed]}>
